@@ -1,0 +1,12 @@
+name = "finance-qcm-encg"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-01"
+
+# KV namespace for shared accounts + leaderboard.
+# Create it once, then paste the real id here:
+#   npx wrangler kv namespace create FA_KV
+#   npx wrangler kv namespace create FA_KV --preview
+[[kv_namespaces]]
+binding = "FA_KV"
+id = "REPLACE_WITH_KV_ID"
+preview_id = "REPLACE_WITH_KV_PREVIEW_ID"

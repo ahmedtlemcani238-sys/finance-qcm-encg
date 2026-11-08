@@ -1,0 +1,57 @@
+<header id="fa-topbar">
+  <div class="fa-user-chip">
+    <div class="fa-avatar" id="fa-avatar">?</div>
+    <div>
+      <div class="fa-name" id="fa-display-name">—</div>
+      <div class="fa-sub" id="fa-display-sub">—</div>
+    </div>
+  </div>
+  <div class="fa-top-actions">
+    <button class="btn btn-outline-primary" id="fa-btn-leaderboard" type="button">🏆 Classement</button>
+    <button class="btn btn-outline-secondary" id="fa-btn-achievements" type="button">🏆 Mes prix</button>
+    <button class="btn btn-outline-danger" id="fa-btn-logout" type="button">Déconnexion</button>
+  </div>
+</header>
+<div id="fa-auth">
+  <div class="fa-auth-card">
+    <h1>Finance alternative — QCM ENCG</h1>
+    <p class="fa-tagline">Crowdfunding &amp; Finance Islamique • 120 QCM • ENCG Fès</p>
+    <div class="fa-tabs">
+      <button class="fa-tab is-active" id="fa-tab-login" type="button">Connexion</button>
+      <button class="fa-tab" id="fa-tab-register" type="button">Créer un compte</button>
+    </div>
+    <form id="fa-form-login" autocomplete="on">
+      <label for="fa-login-username">Nom d'utilisateur</label>
+      <input id="fa-login-username" name="username" type="text" placeholder="ex : yassine_01" required minlength="3" autocomplete="username">
+      <label for="fa-login-password">Mot de passe</label>
+      <input id="fa-login-password" name="password" type="password" placeholder="••••••••" required autocomplete="current-password">
+      <div class="fa-error" id="fa-login-error"></div>
+      <div class="form-actions"><button class="btn btn-primary btn-block btn-lg" type="submit">Se connecter</button></div>
+    </form>
+    <form id="fa-form-register" style="display:none" autocomplete="on">
+      <label for="fa-reg-name">Nom complet</label>
+      <input id="fa-reg-name" name="name" type="text" placeholder="ex : Yassine El Fassi" required minlength="2" autocomplete="name">
+      <label for="fa-reg-username">Nom d'utilisateur</label>
+      <input id="fa-reg-username" name="username" type="text" placeholder="ex : yassine_01" required minlength="3" maxlength="20" autocomplete="username">
+      <label for="fa-reg-password">Mot de passe</label>
+      <input id="fa-reg-password" name="password" type="password" placeholder="4 caractères minimum" required minlength="4" autocomplete="new-password">
+      <div class="fa-error" id="fa-reg-error"></div>
+      <div class="form-actions"><button class="btn btn-primary btn-block btn-lg" type="submit">Créer mon compte</button></div>
+    </form>
+    <p class="fa-note">Ton compte sert à te classer et à débloquer des succès. Le mot de passe est haché dans ton navigateur — c'est un site d'entraînement pour l'examen, pas un service bancaire.</p>
+  </div>
+</div>
+<div class="fa-modal" id="fa-modal-leaderboard" role="dialog" aria-modal="true" aria-labelledby="fa-lb-title">
+  <div class="fa-modal-card">
+    <div class="fa-modal-head"><h2 id="fa-lb-title">🏆 Classement</h2><button class="btn-close" type="button" data-fa-close>×</button></div>
+    <p class="text-muted" id="fa-lb-note" style="margin-bottom:.75rem">Classement par points : 10 points par bonne réponse.</p>
+    <div id="fa-lb-body"></div>
+  </div>
+</div>
+<div class="fa-modal" id="fa-modal-achievements" role="dialog" aria-modal="true" aria-labelledby="fa-ach-title">
+  <div class="fa-modal-card">
+    <div class="fa-modal-head"><h2 id="fa-ach-title">🏆 Mes prix</h2><button class="btn-close" type="button" data-fa-close>×</button></div>
+    <div class="fa-ach-grid" id="fa-ach-body"></div>
+  </div>
+</div>
+<div id="fa-toast" role="status"></div>
